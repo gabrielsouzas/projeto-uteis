@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
 
+:root {
+    /* Declaração das variáveis das cores*/
+    --backgroundcolor: #201b2c;
+    --backgroundlogincolor: #2f2841;
+    --backgroundloginbuttoncolor: #00ff88;
+    --backgroundtextfieldcolor: #514869;
+    --textleftcolor: #77ffc0;
+    --textlogincolor: #00ff88;
+    --textloginbuttoncolor: #2b134b;
+}
+
 body {
     margin: 0;
     font-family: 'Noto Sans', sans-serif;
@@ -13,7 +24,7 @@ body * {
 .main-login {
     width: 100vw; /*tamanho de 100% em relação a ViewPort Width*/
     height: 100vh; /*tamanho de 100% em relação a ViewPort Height*/
-    background: #201b2c;
+    background: var(--backgroundcolor);
     display: flex; /* o flex deixa tudo lado a lado */
     justify-content: center; /* centraliza as coisas no eixo x */
     align-items: center; /* centraliza as coisas no eixo y */
@@ -31,7 +42,7 @@ body * {
 /* aponta para o H1 dentro da div left-login */
 .left-login > h1 {
     font-size: 3vw; /* titulo ajustavel a pagina*/
-    color: #77ffc0;
+    color: var(--textleftcolor);
 }
 
 .left-login-image {
@@ -53,14 +64,14 @@ body * {
     align-items: center;
     flex-direction: column;
     padding: 30px 35px; /* margens de dentro do elemento, no caso são 30px em cima e em baixo e 35px nas laterais */
-    background: #2f2841;
+    background: var(--backgroundlogincolor);
     border-radius: 20px;
     /*  sombra: centro baixo blur cor*/
     box-shadow: 0px 10px 40px #00000056;
 }
 
 .card-login > h1{
-    color: #00ff88;
+    color: var(--textlogincolor);
     font-weight: 800;
     margin: 0;
 
@@ -80,7 +91,7 @@ body * {
     border: none;
     border-radius: 10px;
     padding: 15px;
-    background: #514869;
+    background: var(--backgroundtextfieldcolor);
     color: #f0ffffde;
     font-size: 12pt;
     box-shadow: 0px 10px 40px #00000056;
@@ -107,10 +118,10 @@ body * {
     text-transform: uppercase;
     font-weight: 800;
     letter-spacing: 3px;
-    color: #2b134b;
-    background: #00ff88;
+    color: var(--textloginbuttoncolor);
+    background: var(--backgroundloginbuttoncolor);
     cursor: pointer;
-    box-shadow: 0px 10px 40px -12px #00ff88;
+    box-shadow: 0px 10px 40px -12px var(--backgroundloginbuttoncolor);
 }
 
 /* Parâmetros para responsividade em outros dispositivos */
