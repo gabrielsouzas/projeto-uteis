@@ -1,3 +1,8 @@
+:root {
+    /*--color: #03e9f4;*/
+    --color: #03e9f4;
+}
+
 html {
     height: 100%;
 }
@@ -24,6 +29,7 @@ body {
     padding: 0;
     color: #fff;
     text-align: center;
+    font-size: 2em;
 }
 .login-box .user-box {
     position: relative;
@@ -37,7 +43,7 @@ body {
     border: none;
     border-bottom: 1px solid #fff;
     outline: none;
-    background: transparent; /* Removeu o fundo e deixou só a linha de baixo por causa do border-bottom */
+    background: transparent; /* Removeu o fundo e deixou só a linha de baixo com do border-bottom */
 }
 .login-box .user-box label {
     position: absolute;
@@ -53,14 +59,14 @@ body {
 .login-box .user-box input:valid ~ label {
     top: -20px;
     left: 0;
-    color: #03e9f4;
+    color: var(--color);
     font-size: 12px;
 }
 .login-box form a {
     position: relative;
     display: inline-block;
     padding: 10px 20px;
-    color: #03e9f4;
+    color: var(--color);
     font-size: 16px;
     text-decoration: none;
     text-transform: uppercase;
@@ -70,14 +76,14 @@ body {
     letter-spacing: 4px;
 }
 .login-box a:hover {
-    background: #03e9f4;
+    background: var(--color);
     color: #fff;
     border-radius: 5px;
     /* Esse box shadow cria um efeito de luminosidade no botão */
-    box-shadow: 0 0 5px #03e9f4,
-                0 0 25px #03e9f4,
-                0 0 50px #03e9f4,
-                0 0 100px #03e9f4;
+    box-shadow: 0 0 5px var(--color),
+                0 0 25px var(--color),
+                0 0 50px var(--color),
+                0 0 100px var(--color);
 }
 .login-box a span {
     position: absolute;
@@ -89,7 +95,7 @@ body {
     left: -100%;
     width: 100%;
     height: 2px;
-    background: linear-gradient(90deg, transparent, #03e9f4);
+    background: linear-gradient(90deg, transparent, var(--color));
     animation: btn-anim1 1s linear infinite;
 }
 
@@ -107,7 +113,7 @@ body {
     right: 0;
     width: 2px;
     height: 100%;
-    background: linear-gradient(180deg, transparent, #03e9f4);
+    background: linear-gradient(180deg, transparent, var(--color));
     animation: btn-anim2 1s linear infinite;
     animation-delay: .25s;
 }
@@ -124,7 +130,7 @@ body {
     right: -100%;
     width: 100%;
     height: 2px;
-    background: linear-gradient(270deg, transparent, #03e9f4);
+    background: linear-gradient(270deg, transparent, var(--color));
     animation: btn-anim3 1s linear infinite;
     animation-delay: .5s;
 }
@@ -141,7 +147,7 @@ body {
     left: 0;
     width: 2px;
     height: 100%;
-    background: linear-gradient(360deg, transparent, #03e9f4);
+    background: linear-gradient(360deg, transparent, var(--color));
     animation: btn-anim4 1s linear infinite;
     animation-delay: .75s;
 }
