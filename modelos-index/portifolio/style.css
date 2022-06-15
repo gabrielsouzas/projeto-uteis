@@ -1,9 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
 
+:root {
+    --cor: rgb(57, 57, 219);
+    --fundo: rgb(168, 213, 231);
+}
+
 * {
     padding: 0;
     margin: 0;
     font-family: 'Noto Sans', sans-serif;
+}
+
+body {
+    background: var(--fundo);
 }
 
 nav {
@@ -33,27 +42,57 @@ nav a {
     margin: 20px;
 }
 
-button {
-    align-self: flex-start;
-    margin-top: 50px;
-    padding: 5px 15px;
-    background: rgb(88, 88, 192);
-    color: white;
-    border: none;
-}
-
-button:hover {
-    cursor: pointer;
-}
-
 .name {
-    color: rgb(88, 88, 192);
+    color: var(--cor)
 }
+/*
+.right {
+    position: relative;
+    display: flex;
+    align-self: center;
+    background: rgb(88, 88, 192);
+    width: 250px;
+    height: 250px;
+    border: 47px solid white;
+    border-radius: 30% 70% 70% 33% / 32% 30% 70% 68% ;
+    /*align-items: flex-end;
+}*/
 
 .right {
-    background: rgb(88, 88, 192);
-    width: 300px;
-    height: 300px;
-    border-radius: 30% 70% 70% 30% / 32% 30% 70% 68% ;
+    height: 100vh;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.foto {
+    position: relative;
+    /*display: flex;
+    align-self: center;*/
+    background: var(--cor);
+    width: 250px;
+    height: 250px;
+    border-radius: 69% 31% 50% 50% / 44% 48% 52% 56%  ;
+    /*align-items: flex-end;*/
+}
+
+.right img {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    bottom: 0;
+    left: 25px;
+}
+
+.borda-foto {
+    position: absolute;
+    /*display: flex;*/
+    width: 250px;
+    height: 250px;
+    border: 38px solid var(--fundo);
+    border-radius: 69% 31% 50% 50% / 44% 48% 52% 56%  ;
+    left: -39px;
+    bottom: -39px;
 }
 
