@@ -1,18 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
 
 :root {
-    --cor: rgb(57, 57, 219);
-    --fundo: rgb(168, 213, 231);
+    --cortexto: white;
+    --cor: rgba(27, 28, 31, 0.767);
+    --fundo: rgb(95, 162, 189);
 }
 
 * {
     padding: 0;
     margin: 0;
     font-family: 'Noto Sans', sans-serif;
+    color: var(--cortexto);
 }
 
 body {
     background: var(--fundo);
+    background-image: url("imagens/fundo03.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 nav {
@@ -21,7 +26,6 @@ nav {
 }
 
 nav a {
-    color: black;
     text-decoration: none;
     text-align: center;
     margin: 15px;
@@ -43,21 +47,14 @@ nav a {
     margin: 20px;
 }
 
-.name {
-    color: var(--cor)
+h1 {
+    text-shadow: 10px;
 }
-/*
-.right {
-    position: relative;
-    display: flex;
-    align-self: center;
-    background: rgb(88, 88, 192);
-    width: 250px;
-    height: 250px;
-    border: 47px solid white;
-    border-radius: 30% 70% 70% 33% / 32% 30% 70% 68% ;
-    /*align-items: flex-end;
-}*/
+
+.name {
+    color: var(--cor);
+    text-shadow: 10px;
+}
 
 .right {
     height: 100vh;
@@ -69,31 +66,13 @@ nav a {
 
 .foto {
     position: relative;
-    /*display: flex;
-    align-self: center;*/
-    background: var(--cor);
+    background-image: url(foto-perfil.png);
+    background-repeat: no-repeat;
+    background-position: 50% 100%;
+    background-color:var(--cor);
     width: 250px;
     height: 250px;
     border-radius: 69% 31% 50% 50% / 44% 48% 52% 56%  ;
-    /*align-items: flex-end;*/
 }
 
-.right img {
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    bottom: 0;
-    left: 25px;
-}
-
-.borda-foto {
-    position: absolute;
-    /*display: flex;*/
-    width: 250px;
-    height: 250px;
-    border: 38px solid var(--fundo);
-    border-radius: 69% 31% 50% 50% / 44% 48% 52% 56%  ;
-    left: -39px;
-    bottom: -39px;
-}
 
