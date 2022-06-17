@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de leitura de um texto com Javascript</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+        * {
+            font-family: 'Noto sans', sans-serif;
+        }
+
+        div {
+            width: 90vw;
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .texto {
+            width: 400px;
+            height: 400px;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <p>Digite um texto no campo abaixo para o Javascript ler em voz alta</p>
+        <input class="texto" type="text" name="texto" id="texto">
+        <input type="submit" value="Ler" onclick="ler()">
+    </div>
+</body>
+
+<script>
+    function ler() {
+        var texto = document.getElementById('texto');
+        const speech = new SpeechSynthesisUtterance();
+        speech.text = texto.value;
+        speech.lang = "pt-BR";
+
+        window.speechSynthesis.speak(speech);
+    }
+</script>
+
+</html>
