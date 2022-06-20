@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+
+:root {
+    /*Cores*/
+    /*Tecnologia*/
+    --cor1: #004A85;
+    --cor2: #00ADE8;
+    --cor3: #F2F2F2;
+    /*Educação*/
+    --cor4: #2153AA;
+    --cor5: #DDAB34;
+    --cor6: #F2F2F2;
+    /*Confeitaria*/
+    --cor7: #F1C2C4;
+    --cor8: #72BBB8;
+    --cor9: #EBEBEB;
+    /*Psicologia*/
+    --cor10: #163029;
+    --cor11: #7D9C91;
+    --cor12: #D0C781;
+    /*Turismo e Viagens*/
+    --cor13: #0064BB;
+    --cor14: #FF8400;
+    --cor15: #DFDFDF;
+    /*Advocacia*/
+    --cor16: #0C273F;
+    --cor17: #D69F5B;
+    --cor18: #EBEBEB;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+    gap: 32px;
+    padding: 12px;
+    background: var(--cor1);
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--cor3);
+}
+h1 {
+    font-family: 'Alfa Slab One', cursive;
+    color: #0064BB;
+    font-size: 1.5em;
+    padding: 5px;
+    letter-spacing: 2px;
+    background: #e9ecec;
+    margin: 0;
+}
+
+.cabecalho {
+    display: flex;
+    font-weight: bold;
+    background-image: linear-gradient(to right, #00ADE8 10%, #39a6ca 30%, #78cde9);
+}
+
+.corpo {
+    display: flex;
+}
+
+.a {
+    padding: 5px;
+    width: 25vw;
+    border: 1px solid var(--cor1);
+}
+.b {
+    padding: 5px;
+    width: 35vw;
+    border: 1px solid var(--cor1);
+}
+.c {
+    padding: 5px;
+    width: 40vw;
+    border: 1px solid var(--cor1);
+}
