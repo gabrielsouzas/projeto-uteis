@@ -54,7 +54,7 @@ function showNotes() {
                         <div class="settings">
                             <div class="menu">
                                 <span class="edit-btn" onclick="editNote(${index}, '${note.title}', '${filtDesc}')"><i class="fa-solid fa-pen"></i> Editar</span>
-                                <span class="delete-btn" onclick="deleteNote(${index})"><i class="fa-solid fa-trash"></i> Deletar</span>
+                                <span class="delete-btn" onclick="deleteNote(${index})"><i class="fa-solid fa-trash-can"></i> Deletar</span>
                             </div>
                         </div>
                     </div>`;
