@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
+h1 {
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 15px;
+}
+
+.tela {
+    display: flex;
+    width: 300px;
+    height: 100px;
+    background-color: rgb(241, 221, 154);
+    margin: 0 auto;
+    align-items: flex-end;
+    justify-content: end;
+    font-size: 2.5em;
+}
+
+.teclado {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.tecla {
+    display: flex;
+    /* Define a proporção do height */
+    aspect-ratio: 1/1;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.767);
+    color: white;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6em;
+    /* Tempo de transição do efeito de rotação do card */
+    transition: all 400ms ease;
+    cursor: pointer;
+}
+
+.operadores {
+    background-color: grey;
+}
+
+.res {
+    background-color: orange;
+}
