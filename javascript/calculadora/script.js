@@ -1,5 +1,8 @@
 const tela = document.querySelector('.tela');
 
+var val1 = '';
+var op = '';
+
 const criarEventos = () => {
     for (let index = 0; index < 20; index++) {
         const tecla = document.getElementsByClassName('tecla')[index];
@@ -16,7 +19,7 @@ const calcular = ({ target }) => {
     } else if (target.value === '+/-') {
         
     } else if (target.value === '=') {
-        
+        execOpe(target);
     } else {
         //!isNaN(target.value)
         if (tela.innerHTML.length === 0) {
@@ -38,8 +41,33 @@ function execOpe(target) {
     if (!isNaN(target.value)) {
         tela.innerHTML += target.value;
     } else {
-        var res = tela.innerHTML
-        
+        if (val1.length === 0) {
+            val1 = tela.innerHTML;
+            op = target.value;
+            tela.innerHTML += target.value;
+        } else {
+            tela.innerHTML = detecOperacao(val1, tela.innerHTML.split(op)[1], op);
+            val1 = tela.innerHTML;
+            op = target.value;
+            if(!target.value === '='){ 
+                tela.innerHTML += target.value;
+            }
+        }
+
+    }
+}
+
+function detecOperacao(valor1, valor2, operador) {
+    if (operador === '/') {
+        return Number(valor1) / Number(valor2);
+    } else if (operador === 'X') {
+        return Number(valor1) * Number(valor2);
+    } else if (operador === '-') {
+        return Number(valor1) - Number(valor2);
+    } else if (operador === '+') {
+        return Number(valor1) + Number(valor2);
+    } else if (operador === '%') {
+        return Number(valor1) % Number(valor2);
     }
 }
 
