@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500&display=swap');
 
+:root {
+    --cor: rgb(41, 40, 38);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -15,17 +19,29 @@ h1 {
     text-align: center;
     padding-top: 5px;
     padding-bottom: 15px;
+
+    color: var(--cor);
+    /* Esse text shadow cria um efeito de luminosidade no texto */
+    text-shadow: 0 0 5px var(--cor),
+                0 0 25px var(--cor),
+                0 0 50px var(--cor),
+                0 0 100px var(--cor);
 }
 
-.tela {
+.tela-cima, .tela-baixo {
     display: flex;
     width: 300px;
-    height: 100px;
+    height: 55px;
     background-color: rgb(129, 129, 128);
     margin: 0 auto;
     align-items: flex-end;
     justify-content: end;
     font-size: 2.5em;
+}
+
+.tela-cima {
+    font-size: 1.5em;
+    overflow: hidden;
 }
 
 .teclado {

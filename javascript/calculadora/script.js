@@ -1,10 +1,13 @@
-const tela = document.querySelector('.tela');
+const tela = document.querySelector('.tela-baixo');
+const telaCima = document.querySelector('.tela-cima');
 
 var val1 = '';
 var op = '';
 var clicouIgual = false;
 var deletou = false;
 var segundoPonto = false;
+var calc = '';
+var primDados = true;
 
 const criarEventos = () => {
     for (let index = 0; index < 20; index++) {
@@ -89,6 +92,7 @@ function execOpe(target) {
                     tela.innerHTML += target.value;
                     clicouIgual = false;
                 } else {
+                    calc = tela.innerHTML;
                     var res = detecOperacao(val1, tela.innerHTML.split(op)[1], op);
                     console.log(res);
                     if (!(res % 1 === 0)) {
@@ -103,8 +107,19 @@ function execOpe(target) {
                     if (target.value != '=') {
                         tela.innerHTML += target.value;
                         clicouIgual = false;
+                        if (primDados) {
+                            telaCima.innerHTML += calc  + target.value;
+                            primDados = false;
+                        } else {
+                            console.log('Calc: ' + calc)
+                            console.log('Calc: ' + op)
+                            var opAnt = telaCima.innerHTML.substring(telaCima.innerHTML.length-1, telaCima.innerHTML.length);
+                            telaCima.innerHTML += calc.split(opAnt)[1] + target.value;
+                        }
                     } else {
                         clicouIgual = true;
+                        var opAnt = telaCima.innerHTML.substring(telaCima.innerHTML.length-1, telaCima.innerHTML.length);
+                        telaCima.innerHTML += calc.split(opAnt)[1];
                     }
                 }
             }
