@@ -19,10 +19,26 @@ const calcular = ({ target }) => {
         tela.innerHTML = '';
         val1 = '';
         op = '';
+        segundoPonto = false;
         clicouIgual = false;
     } else if (target.value === 'DEL') {
+        var charApagado = tela.innerHTML.substring(tela.innerHTML.length-1, tela.innerHTML.length);
         tela.innerHTML = tela.innerHTML.substring(0, tela.innerHTML.length - 1);
-        val1 = tela.innerHTML;
+        if (isNaN(tela.innerHTML)) {
+            val1 = tela.innerHTML.split(op)[0];
+        } else {
+            console.log(charApagado)
+            if (isNaN(charApagado)) {
+                val1 = '';
+            } else {
+                val1 = tela.innerHTML;
+            }
+        }
+        if ((Number(tela.innerHTML) % 1 === 0)) {
+            segundoPonto = false;
+        } else {
+            segundoPonto = true;
+        }
         //deletou = true;
     } else if (target.value === '+/-') {
         
@@ -55,17 +71,15 @@ function execOpe(target) {
         } else {
             tela.innerHTML += target.value;
         }
-        
-        /*if (deletou){
-            val1 = tela.innerHTML;
-        }*/
     } else {
         segundoPonto = false;
         //if (target.value != '.') {
             if (val1.length === 0) {
-                val1 = tela.innerHTML;
-                op = target.value;
-                tela.innerHTML += target.value;
+                if (target.value != '=') {
+                    val1 = tela.innerHTML;
+                    op = target.value;
+                    tela.innerHTML += target.value;
+                }
             } else {
                 //deletou = false;
                 //clicouPonto = false;
@@ -76,8 +90,12 @@ function execOpe(target) {
                     clicouIgual = false;
                 } else {
                     var res = detecOperacao(val1, tela.innerHTML.split(op)[1], op);
+                    console.log(res);
                     if (!(res % 1 === 0)) {
                         res = res.toFixed(2);
+                        segundoPonto = true;
+                    } else {
+                        segundoPonto = false;
                     }
                     tela.innerHTML = res;
                     val1 = tela.innerHTML;

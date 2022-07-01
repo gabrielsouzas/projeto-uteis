@@ -21,7 +21,7 @@ h1 {
     display: flex;
     width: 300px;
     height: 100px;
-    background-color: rgb(241, 221, 154);
+    background-color: rgb(129, 129, 128);
     margin: 0 auto;
     align-items: flex-end;
     justify-content: end;
