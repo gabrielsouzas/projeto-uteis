@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script defer src="js/script.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>App do Tempo</title>
+</head>
+<body>
+    <div class="container">
+
+        <!-- Formulário de preenchimento dos dados da busca -->
+        <form class="form">
+            <input class="city" type="text" placeholder="Cidade">
+            <button type="submit">Pesquisar</button>
+        </form>
+
+        <!-- Card com as informações da busca-->
+        <div class="card">
+            <div class="card-info">
+              <span class="card-location-name">{location.name}</span>
+              <span class="card-location-info">{`${location.region}, ${location.country}`}</span>
+            </div>
+      
+            <div class="card-temperature">
+              <span class="card-temperature-value">{current.temp_c}</span>
+              <span class="card-temperature-icon">ºC</span>
+            </div>
+      
+            <div class="card-img">
+              <img class="card-img-icon" src="//cdn.weatherapi.com/weather/64x64/day/113.png" alt="Wheater icon" />
+              <span class="card-img-text"></span>
+            </div>
+          </div>
+
+    </div>
+</body>
+</html>
