@@ -12,29 +12,29 @@
 </head>
 <body>
     <div class="container">
-
+      <div class="box">
         <!-- Formulário de preenchimento dos dados da busca -->
         <form class="form">
             <input class="city" type="text" placeholder="Cidade">
             <button type="submit">Pesquisar</button>
         </form>
 
-        <!-- Card com as informações da busca-->
-        <div class="card">
-            <div class="card-info">
-              <span class="card-location-name">{location.name}</span>
-              <span class="card-location-info">{`${location.region}, ${location.country}`}</span>
+        
+            <div class="card">
+              <div class="card-info">
+                <span class="card-location-name"></span>
+                <span class="card-location-info"></span>
+              </div>
+              <div class="card-temperature">
+                <span class="card-temperature-value"></span>
+                <span class="card-temperature-icon">ºC</span>
+              </div>
+              <div class="card-img">
+                <img class="card-img-icon" src="//cdn.weatherapi.com/weather/64x64/day/113.png" alt="Wheater icon" />
+                <span class="card-img-text"></span>
+              </div>
             </div>
-      
-            <div class="card-temperature">
-              <span class="card-temperature-value">{current.temp_c}</span>
-              <span class="card-temperature-icon">ºC</span>
-            </div>
-      
-            <div class="card-img">
-              <img class="card-img-icon" src="//cdn.weatherapi.com/weather/64x64/day/113.png" alt="Wheater icon" />
-              <span class="card-img-text"></span>
-            </div>
+
           </div>
 
     </div>

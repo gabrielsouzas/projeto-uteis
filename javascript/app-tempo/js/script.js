@@ -69,11 +69,16 @@ const handleSubmit = (event) => {
 form.addEventListener('submit', handleSubmit);
 
 const load = () => {
-    locationName.innerHTML = data.location.name;
+  city = 'Assis';
+  fetchData(city).then((response) => {
+   data = response; 
+  
+  locationName.innerHTML = data.location.name;
     locationInfo.innerHTML = `${data.location.region}, ${data.location.country}`;
     temperatureValue.innerHTML = data.current.temp_c
     imgText.innerHTML = data.current.condition.text
     imgIcon.setAttribute('src', data.current.condition.icon);
+  });
 
 };
 
