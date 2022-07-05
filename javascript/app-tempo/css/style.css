@@ -17,8 +17,21 @@
     align-items: center;
   }
 
+  .box, .card, .card-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .box {
+    gap: 30px;
+    height: 350px;
+    width: 250px;
+  }
+
   .city {
-    font-size: 1.2em;
+    font-size: 1em;
+    width: 155px;
     padding: 3px;
     background-color: rgba(128, 128, 128, 0.349);
     border: none;
@@ -26,7 +39,7 @@
   }
 
   button {
-    font-size: 1.2em;
+    font-size: 1em;
     padding: 3px 10px;
     background-color: rgba(93, 180, 214, 0.61);
     border: none;
@@ -40,40 +53,37 @@
     color: white;
   }
 
-  .box, .card, .card-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .box {
-    gap: 30px;
-    height: 300px;
-  }
-
   .card {
-    gap: 15px;
     justify-content: center;
     align-items: center;
+    align-content: center;
     width: 100%;
     height: 100%;
-    border: 1px solid rgba(85, 84, 84, 0.733);
     border-radius: 10px;
     color: rgb(77, 76, 76);
-  }
-
-  .card-info {
-    gap: 3px;
+    box-shadow: 2px 5px 9px 5px rgba(71,71,71,0.81);
   }
 
   .card-location-name {
+    padding-top: 15px;
     font-size: 2.5em;
     font-weight: bolder;
+  }
+
+  .card-temperature {
+    padding-top: 10px;
+    display: flex;
   }
 
   .card-temperature-value {
     font-size: 5em;
     font-weight: bolder;
+    color: gray;
+  }
+
+  .card-temperature-icon {
+    font-size: 1.5em;
+    color: gray;
   }
 
   .card-img {
@@ -81,4 +91,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-bottom: 15px;
+  }
+
+  .card-img-icon {
+    width: 90px;
   }
