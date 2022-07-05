@@ -30,10 +30,13 @@ const initialData = {
 // Array para armazenar o retorno da API
 var data = initialData;
 
+// Linguagem de retorno das informações
+var language = 'pt'
+
 // Essa função assincrona vai retornar uma promise, que é uma promessa do retorno,
 // ou seja, ela vai ficar aguardando o retorno dos dados
 const fetchData = async () => {
-  const url = `https://api.weatherapi.com/v1/current.json?key=${KEY}&q=${cityInput.value}&aqi=no`;
+  const url = `https://api.weatherapi.com/v1/current.json?key=${KEY}&q=${cityInput.value}&aqi=no&lang=${language}`;
 
   /* Aqui a função fetch do JavasScript pega o retorno da chamada da url da API Weather */
   const fetchResponse = await fetch(url);
@@ -58,15 +61,15 @@ const handleSubmit = (event) => {
 const fillInFields = (data) => {
   locationName.innerHTML = data.location.name;
   locationInfo.innerHTML = `${data.location.region}, ${data.location.country}`;
-  temperatureValue.innerHTML = data.current.temp_c
-  imgText.innerHTML = data.current.condition.text
+  temperatureValue.innerHTML = data.current.temp_c;
+  imgText.innerHTML = data.current.condition.text;
   imgIcon.setAttribute('src', data.current.condition.icon);
 }
 
 form.addEventListener('submit', handleSubmit);
 
 const load = () => {
-    fillInFields(data);
+  fillInFields(data);
 };
 
 load();
