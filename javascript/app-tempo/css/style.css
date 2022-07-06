@@ -101,3 +101,11 @@
   .card-img-icon {
     width: 90px;
   }
+
+  /* Quando a tela for menor que 950 pixels faz essas alterações */
+@media only screen and (max-width: 950px){
+  .container {
+    justify-content: flex-start;
+    margin-top: 30px;
+  }
+}
