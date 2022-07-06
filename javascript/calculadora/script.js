@@ -8,6 +8,8 @@ var deletou = false;
 var segundoPonto = false;
 var calc = '';
 var primDados = true;
+var opAnt = '';
+telaCima.innerHTML = '';
 
 const criarEventos = () => {
     for (let index = 0; index < 20; index++) {
@@ -24,23 +26,29 @@ const calcular = ({ target }) => {
         op = '';
         segundoPonto = false;
         clicouIgual = false;
+        telaCima.innerHTML = '';
     } else if (target.value === 'DEL') {
         var charApagado = tela.innerHTML.substring(tela.innerHTML.length-1, tela.innerHTML.length);
-        tela.innerHTML = tela.innerHTML.substring(0, tela.innerHTML.length - 1);
-        if (isNaN(tela.innerHTML)) {
-            val1 = tela.innerHTML.split(op)[0];
-        } else {
-            console.log(charApagado)
-            if (isNaN(charApagado)) {
-                val1 = '';
-            } else {
-                val1 = tela.innerHTML;
+        if (testarCharApagado(charApagado)) {
+            tela.innerHTML = tela.innerHTML.substring(0, tela.innerHTML.length - 1);
+            if (isNaN(tela.innerHTML)) {
+                val1 = tela.innerHTML.split(op)[0];
+            } else {  
+                telaCima.innerHTML = '';
+                primDados = true;
+                console.log(charApagado)
+                if (isNaN(charApagado)) {
+                    val1 = '';
+                } else {
+                    val1 = tela.innerHTML;
+                }
             }
-        }
-        if ((Number(tela.innerHTML) % 1 === 0)) {
-            segundoPonto = false;
-        } else {
-            segundoPonto = true;
+            if ((Number(tela.innerHTML) % 1 === 0)) {
+                segundoPonto = false;
+            } else {
+                segundoPonto = true;
+            }
+            
         }
         //deletou = true;
     } else if (target.value === '+/-') {
@@ -91,6 +99,10 @@ function execOpe(target) {
                     op = target.value;
                     tela.innerHTML += target.value;
                     clicouIgual = false;
+                    if (telaCima.innerHTML.length > 0) {
+                        opAnt = telaCima.innerHTML.substring(telaCima.innerHTML.length-1, telaCima.innerHTML.length);
+                        telaCima.innerHTML += calc.split(opAnt)[1] + target.value;
+                    }
                 } else {
                     calc = tela.innerHTML;
                     var res = detecOperacao(val1, tela.innerHTML.split(op)[1], op);
@@ -112,14 +124,20 @@ function execOpe(target) {
                             primDados = false;
                         } else {
                             console.log('Calc: ' + calc)
-                            console.log('Calc: ' + op)
-                            var opAnt = telaCima.innerHTML.substring(telaCima.innerHTML.length-1, telaCima.innerHTML.length);
-                            telaCima.innerHTML += calc.split(opAnt)[1] + target.value;
+                            console.log('telaCima: ' + telaCima.innerHTML)
+                            if (telaCima.innerHTML.length > 0) {
+                                opAnt = telaCima.innerHTML.substring(telaCima.innerHTML.length-1, telaCima.innerHTML.length);
+                                telaCima.innerHTML += calc.split(opAnt)[1] + target.value;
+                            }
                         }
                     } else {
                         clicouIgual = true;
-                        var opAnt = telaCima.innerHTML.substring(telaCima.innerHTML.length-1, telaCima.innerHTML.length);
-                        telaCima.innerHTML += calc.split(opAnt)[1];
+                        console.log('telaCima: ' + telaCima.innerHTML.length);
+                        //var opAnt = '';
+                        if (telaCima.innerHTML.length > 0) {
+                            opAnt = telaCima.innerHTML.substring(telaCima.innerHTML.length-1, telaCima.innerHTML.length);
+                            telaCima.innerHTML += calc.split(opAnt)[1];
+                        }
                     }
                 }
             }
@@ -128,6 +146,14 @@ function execOpe(target) {
             clicouPonto = true;
         }*/
 
+    }
+}
+
+const testarCharApagado = (char) => {
+    if (char != '/' && char != 'X' && char != '-' && char != '+' && char != '%' && char != '+/-' && char != '=') {
+        return true;
+    } else {
+        return false;
     }
 }
 
