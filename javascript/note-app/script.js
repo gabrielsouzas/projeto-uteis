@@ -66,12 +66,14 @@ function showNotes() {
 // Mostra as anotações na tela, se existirem
 showNotes();
 
+// Função para deletar a anotação
 function deleteNote(Noteid) {
     allNotes.splice(Noteid, 1); // Deleta a anotação do array
     localStorage.setItem("allNotes", JSON.stringify(allNotes));
     showNotes();
 }
 
+// Função para editar a anotação
 function editNote(Noteid, title, filtDesc) {
     let desc = filtDesc.replaceAll('<br/>', '\r\n');
     updateId = Noteid;
@@ -81,6 +83,7 @@ function editNote(Noteid, title, filtDesc) {
     note_desc_input.value = desc;
 };
 
+// Clique
 closeIcon.addEventListener('click', e => {
     e.preventDefault();
     let noteTitle = note_title_input.value;
