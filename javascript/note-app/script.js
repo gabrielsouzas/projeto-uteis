@@ -40,6 +40,7 @@ ShowNoteBtn.addEventListener('click', () => {
     note_desc_input.value = '';
 });
 
+// Mostra as anotações na tela, se existirem
 function showNotes() {
     let NoteAdd = '';
     document.querySelectorAll('.note').forEach(note => note.remove());
@@ -63,7 +64,7 @@ function showNotes() {
                                     <span class="no-notes-message">Ainda não existem Anotações</span>`;
 }
 
-// Mostra as anotações na tela, se existirem
+// Chamada do médoto para mostrar as anotações na tela
 showNotes();
 
 // Função para deletar a anotação
