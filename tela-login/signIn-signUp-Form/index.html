@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Sign-In/Up</title>
+
+    <!-- Link do CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <script defer src="script.js" charset="utf-8"></script>
+
+    <!-- Link da fonte do Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+    <!-- Link dos icones do Font Awesome -->
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css'>
+
+</head>
+<body>
+    <!-- Div principal -->
+    <div class="container" id="container">
+        <!-- Div do formulário signUp -->
+        <div class="form-container sign-up-container">
+            <!-- Formulário -->
+            <form action="#">
+                <h1>Criar Conta</h1>
+                <!-- Ícones das mídias sociais -->
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <span>ou use seu e-mail para se registrar</span>
+                <!-- Inputs -->
+                <input type="text" placeholder="Nome">
+                <input type="email" name="email" id="email" placeholder="E-Mail">
+                <input type="password" name="senha" id="senha" placeholder="Senha">
+                <!-- Botão que dispara o formulário -->
+                <button>Entrar</button>
+            </form>
+        </div>
+        <!-- Div do formulário signIn -->
+        <div class="form-container sign-in-container">
+            <form action="#">
+                <h1>Efetuar Login</h1>
+                <!-- Ícones das mídias sociais -->
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <span>ou use a sua conta</span>
+                <!-- Inputs -->
+                <input type="text" placeholder="Nome">
+                <input type="email" name="email" id="email" placeholder="E-Mail">
+                <input type="password" name="senha" id="senha" placeholder="Senha">
+                <a href="#">Esqueceu sua senha?</a>
+                <!-- Botão que dispara o formulário -->
+                <button>Entrar</button>
+            </form>
+        </div>
+        <!-- Div que vai correr para a esquerda e para a direita conforme a opção d usuário -->
+        <div class="overlay-container">
+            <div class="overlay">
+                <!-- Div da esquerda -->
+                <div class="overlay-panel overlay-left">
+                    <h1>Bem vindo novamente!</h1>
+                    <p>Para se manter conectado faça login com seus dados pessoais</p>
+                    <button class="ghost" id="signIn">Entrar</button>
+                </div>
+                <!-- Div da direita -->
+                <div class="overlay-panel overlay-right">
+                    <h1>Olá!</h1>
+                    <p>Digite os seus dados pessoais para abrir uma conta</p>
+                    <button class="ghost" id="signUp">Cadastrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
