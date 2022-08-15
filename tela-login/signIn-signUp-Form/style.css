@@ -1,11 +1,20 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 
+:root {
+    --background-color: #3e19b3;/*#f6f5f7*/
+    --inside-color: #451bc9;/*#F2eee3;/*#3e19b3;*/
+    --border-color: #190458; /*red*/
+    --form-color: #5d67e4; /*#FFFFFF*/
+    --container-color: #5d67e4;/*#fff;*/
+    --form-second-gradient-color: #2eaaf0;/*#e7d4c5;*/
+}
+
 * {
     box-sizing: border-box;
 }
 
 body {
-    background: #f6f5f7;
+    background: var(--background-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,6 +25,7 @@ body {
 }
 
 h1 {
+    color: #ffffff;
     font-weight: bold;
     margin: 0;
 }
@@ -33,11 +43,12 @@ p {
 }
 
 span {
+    color: #ffffff;
     font-size: 12px;
 }
 
 a {
-    color: #333;
+    color: #ffffff;
     font-size: 14px;
     text-decoration: none;
     margin: 15px 0;
@@ -45,16 +56,16 @@ a {
 
 button {
     border-radius: 20px;
-    border: 1px solid #F2eee3;
-    background-color: #F2eee3;
-    color: black;
+    border: 1px solid var(--inside-color);
+    background-color: var(--inside-color);
+    color: #ffffff;
     font-size: 12px;
     font-weight: bold;
     padding: 12px 45px;
     letter-spacing: 1px;
     text-transform: uppercase;
     transition: transform 80ms ease-in;
-    border-color: red;
+    border-color: var(--border-color);
 }
 
 button:active {
@@ -67,11 +78,11 @@ button:focus {
 
 button.ghost {
     background-color: transparent;
-    border-color: red;
+    border-color: var(--border-color);
 }
 
 form {
-    background-color: #FFFFFF;
+    background-color: var(--form-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -82,18 +93,23 @@ form {
 }
 
 input {
-    background-color: #F2eee3;
+    color: #d8d4d4;
+    background-color: var(--inside-color);
     border: none;
     padding: 12px 15px;
     margin: 8px 0;
     width: 100%;
 }
 
+input::placeholder {
+    color: rgba(255, 255, 255, 0.651);
+}
+
 .container {
-    background-color: #fff;
+    background-color: var(--container-color);
     border-radius: 10px;
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
-                0 10px 10px rgba(0, 0, 0, 0.22);
+    box-shadow: 0 14px 28px rgba(255, 255, 255, 0.25),
+                0 10px 10px rgba(255, 255, 255, 0.22);
     position: relative;
     overflow: hidden;
     width: 768px;
@@ -163,13 +179,13 @@ input {
 }
 
 .overlay {
-	background: #F2eee3;
-	background: -webkit-linear-gradient(to right, #F2eee3, #e7d4c5);
-	background: linear-gradient(to right, #F2eee3, #e7d4c5);
+	background: var(--inside-color);
+	background: -webkit-linear-gradient(to right, var(--inside-color), var(--form-second-gradient-color));
+	background: linear-gradient(to right, var(--inside-color), var(--form-second-gradient-color), var(--inside-color));
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0 0;
-	color: black;
+	color: #ffffff;
 	position: relative;
 	left: -100%;
 	height: 100%;
@@ -219,7 +235,7 @@ input {
 }
 
 .social-container a {
-	border: 1px solid red;
+	border: 1px solid var(--border-color);
 	border-radius: 50%;
 	display: inline-flex;
 	justify-content: center;
@@ -227,5 +243,5 @@ input {
 	margin: 0 5px;
 	height: 40px;
 	width: 40px;
-	background: #f2eee3;
+	background: var(--inside-color);
 }
