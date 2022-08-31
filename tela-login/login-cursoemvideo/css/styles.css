@@ -1,12 +1,74 @@
 @charset "UTF-8";
 
-/*
-    Paleta de cores
-    Verde: #49a09d
-    Lilás: #5f2c82
-*/
+/* FONTES */
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@900&display=swap");
+
+/* CORES */
 
 :root {
     --verde: #49a09d;
     --lilas: #5f2c82;
 }
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* BODY */
+
+body {
+    background-color: #9c56cab9;
+}
+
+
+/* CONTAINER PRINCIPAL */
+
+#login {
+    margin: 40% 50px;
+    border: 1px solid black;
+    border-radius: 30px;
+    background-color: #8de0de;
+}
+
+/* IMAGEM */
+
+#imagem {
+    height: 150px;
+    background: url("../img/pattern-phone.jpg") no-repeat;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+/* FORMULARIO */
+
+#formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin: 60px 20px;
+}
+
+#formulario h1 {
+    text-transform: uppercase;
+}
+
+#formulario p {
+    text-align: center;
+}
+
+#formulario form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#formulario input {
+    border-radius: 25px;
+}
+
