@@ -20,17 +20,22 @@
 
 /* BODY */
 
+html {
+    height: 100%;
+}
+
 body {
-    background-color: #9c56cab9;
+    background: linear-gradient(to bottom, var(--lilas), #b47fd8);
 }
 
 
 /* CONTAINER PRINCIPAL */
 
 #login {
-    margin: 100px 50px;
-    border: 1px solid black;
+    margin: 50px 50px;
+    border: 1px solid #00000062;
     border-radius: 30px;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.575);
     background-color: #ffffff;
 }
 
@@ -54,14 +59,20 @@ body {
     margin: 30px 20px;
 }
 
+/* TITULO */
+
 #formulario h1 {
     text-transform: uppercase;
     font-weight: 900;
 }
 
+/* INFORMAÇÃO */
+
 #formulario p {
     text-align: center;
 }
+
+/* FORM */
 
 #formulario form {
     display: flex;
@@ -70,17 +81,42 @@ body {
     width: 100%;
 }
 
+/* INPUTS */
+
 #formulario input {
     border-radius: 10px;
     height: 35px;
-    width: 87%;
+    width: 100%;
     border: 2px solid var(--lilas);
-    margin-left: 33px;
+    padding-left: 5px;
 }
+
+/* FUNDO DOS INPUTS */
 
 .fundo-input {
     background-color: var(--lilas);
     border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ICONES */
+
+#fundo-email::before,
+#fundo-senha::before {
+    font-family: FontAwesome;
+    padding: 0px 10px;
+    color: #ffffff;
+}
+
+#fundo-email::before {
+    content: "\f007";
+}
+
+#fundo-senha::before {
+    content: "\f084";
 }
 
 #formulario button {
