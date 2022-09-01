@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela de Login Responsiva - Curso em Video</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css' type='text/css'>
 </head>
 <body>
     <main>
@@ -17,10 +18,15 @@
                 <h1>Login</h1>
                 <p>Seja bem-vindo(a) novamente. Faça login para acessar sua conta e poder fazer as configurações no seu ambiente.</p>
                 <form action="login.php" method="post">
-                    <input type="email" name="email" id="iemail">
-                    <input type="password" name="senha" id="isenha">
-                    <button type="submit">Entrar</button>
+                    <div class="fundo-input">
+                        <input type="email" name="email" id="iemail">
+                    </div>
+                    <div class="fundo-input">
+                        <input type="password" name="senha" id="isenha">
+                    </div>
+                    <button id="btn-entrar" type="submit">Entrar</button>
                 </form>
+                <button id="btn-esqueci">Esqueci a senha</button>
             </div>
         </section>
     </main>
