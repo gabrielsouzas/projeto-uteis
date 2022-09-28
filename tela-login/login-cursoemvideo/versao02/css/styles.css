@@ -35,6 +35,11 @@ section#login {
     /* Para a imagem ficar dentro da borda radius */
     overflow: hidden;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.450);
+
+    /* Faz uma transição animada para quando o tamanho da tela for alterado */
+    transition: width .3s, height .3s;
+    /* Suavisa a animação */
+    transition-timing-function: ease;
 }
 
 section#login > div#imagem {

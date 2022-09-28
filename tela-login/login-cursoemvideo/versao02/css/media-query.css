@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+/* Media Tablet */
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    body {
+        background-image: linear-gradient(to top, #49a09d, #5f2c82);
+    }
+    
+    section#login {
+        width: 80vw;
+    }
+
+    section#login > div#imagem {
+        /* Como a div#imagem está com display block, é possível usar o float para posicionar de onde se inicia a div, nesse caso da esquerda */
+        float: left;
+        /* É necessário colocar um tamanho para a div ocupar */
+        width: 30%;
+        height: 100%;
+    }
+
+    section#login > div#formulario {
+        float: right;
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    body {
+        background-image: linear-gradient(to top, #49a09d, #5f2c82);
+    }
+
+    section#login {
+        width: 950px;
+    }
+
+    section#login > div#imagem {
+        float: left;
+        width: 50%;
+        height: 100%;
+    }
+
+    section#login > div#formulario {
+        float: right;
+        width: 50%;
+    }
+}
