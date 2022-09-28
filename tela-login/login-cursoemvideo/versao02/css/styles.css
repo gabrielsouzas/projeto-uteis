@@ -69,10 +69,11 @@ div#formulario > p {
 
 form > div.campo {
     background-color: #5f2c82;
+    border: 2px solid #5f2c82;
     display: block;
     width: 100%;
     height: 40px;
-    border-radius: 5px;
+    border-radius: 8px;
     margin: 5px 0px;
 }
 
@@ -80,12 +81,38 @@ div.campo > label {
     display: none;
 }
 
+div.campo > i {
+    color: white;
+    font-size: 2em;
+    width: 40px;
+    padding: 5px;
+}
+
+div.campo > input {
+    background-color: #94cfcd;
+    font-size: 1em;
+    /* Faz um calculo para o width ocupar os 100% menos a parte que está a imagem, que é de 40px */
+    width: calc(100% - 45px);
+    height: 100%;
+    border: 0px;
+    border-radius: 8px;
+    padding: 4px;
+
+    /* ATENÇÃO: Fazer todas as transições e transformações no fim */
+    /* Faz a div se mover em -10px no eixo de Y (para cima 10px) */
+    transform: translateY(-12px);
+}
+
+div.campo > input:focus-within {
+    background-color: white;
+}
+
 form > input[type=submit] {
     display: block;
     font-size: 1em;
     width: 100%;
     height: 40px;
-    background-color: #49a09d;
+    background-color: #53aaa7;
     color: white;
     border: none;
     border-radius: 5px;
